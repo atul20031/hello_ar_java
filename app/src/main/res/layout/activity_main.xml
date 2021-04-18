@@ -1,0 +1,129 @@
+<!--
+   Copyright 2016 Google LLC
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.google.ar.core.examples.java.helloar.HelloArActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="fill_parent"
+        android:layout_height="480dp"
+        android:layout_gravity="top" />
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="25dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_settings" />
+
+    <ImageButton
+        android:id="@+id/upload_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/explore"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_filter_alt_24" />
+
+    <EditText
+        android:id="@+id/file_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/surfaceview"
+        android:layout_marginBottom="-66dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
+
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/file_name"
+        android:layout_marginBottom="-50dp"
+        android:padding="10dp"
+
+        android:text="Update Image" />
+
+    <Button
+        android:id="@+id/change_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/file_name"
+        android:layout_marginBottom="-50dp"
+        android:layout_toRightOf="@+id/change"
+        android:padding="10dp"
+
+        android:text="Update Model" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/file_name"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="-51dp"
+        android:layout_toRightOf="@+id/change_model"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBottom="@id/change"
+        android:layout_marginBottom="-74dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/status"
+        android:layout_marginStart="-88dp"
+        android:layout_toEndOf="@+id/explore"
+        android:hint="Caption"
+        android:textSize="15dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upload" />
+
+    <Button
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore" />
+
+
+</RelativeLayout>
